@@ -86,20 +86,7 @@
         </div>
       </div>
 
-      <div class="table-container glass-card"
-        style="padding: 0; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
-        <table style="border-collapse: collapse; width: 100%;">
-          <thead style="background: rgba(255,255,255,0.02);">
-            <tr>
-              <th style="padding: 16px;">Email</th>
-              <th style="padding: 16px;">Role</th>
-              <th style="padding: 16px;">Status</th>
-              <th style="padding: 16px; text-align: right;">Actions</th>
-            </tr>
-          </thead>
-          <tbody id="userTableBody"></tbody>
-        </table>
-      </div>
+      <div id="userTableBody" class="user-grid"></div>
     </section>
 
     <section id="adminServices" class="tab glass-card" hidden>
@@ -110,33 +97,21 @@
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"></div>
     </section>
 
-    <section id="adminModeration" class="tab glass-card" hidden
-      style="height: calc(100vh - 80px); display: flex; flex-direction: column;">
+    <section id="adminModeration" class="tab glass-card" hidden style="display: flex; flex-direction: column;">
       <div class="section-header">
         <h2>Moderation Command Center</h2>
       </div>
 
-      <div class="mod-container"
-        style="display: grid; grid-template-columns: 350px 1fr; gap: 24px; flex: 1; overflow: hidden;">
+      <div class="mod-container mod-main-layout" style="display: grid; gap: 24px; flex: 1; overflow: hidden;">
 
-        <!-- Left: Post Moderation -->
-        <div class="mod-section glass-card"
-          style="display: flex; flex-direction: column; overflow: hidden; background: rgba(0,0,0,0.2);">
-          <h3
-            style="padding: 20px; margin: 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 16px; color: var(--accent);">
-            Community Feed Mod</h3>
-          <div id="adminPostList" style="overflow-y: auto; flex: 1; padding: 20px;">
-          </div>
-        </div>
-
-        <!-- Right: Support & Chat -->
+        <!-- Support & Chat (Top) -->
         <div class="mod-section glass-card"
           style="display: flex; flex-direction: column; overflow: hidden; background: rgba(0,0,0,0.2);">
           <h3
             style="padding: 20px; margin: 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 16px; color: var(--accent);">
             Support Operations</h3>
 
-          <div style="display: grid; grid-template-columns: 240px 1fr; gap: 0; flex: 1; overflow: hidden;">
+          <div class="support-grid-layout" style="display: grid; gap: 0; flex: 1; overflow: hidden;">
             <!-- User List -->
             <div
               style="border-right: 1px solid rgba(255,255,255,0.05); padding: 20px; overflow-y: auto; background: rgba(255,255,255,0.01);">
@@ -174,6 +149,16 @@
               </svg>
               Select an operative stream to begin analysis
             </div>
+          </div>
+        </div>
+
+        <!-- Post Moderation (Bottom) -->
+        <div class="mod-section glass-card"
+          style="display: flex; flex-direction: column; overflow: hidden; background: rgba(0,0,0,0.2);">
+          <h3
+            style="padding: 20px; margin: 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 16px; color: var(--accent);">
+            Community Feed Mod</h3>
+          <div id="adminPostList" style="overflow-y: auto; flex: 1; padding: 20px;">
           </div>
         </div>
 
